@@ -1,0 +1,51 @@
+[
+    {
+        "image": "image/seongchoi.jpg",
+        "name": "최성",
+        "job": "CEO",
+        "email": "seongchoi@g.skku.edu",
+        "education": "성균관대학교"
+    },
+    {
+        "image": "image/jinyounghan.jpg",
+        "name": "한진영",
+        "job": "CTO",
+        "email": "jinyounghan@g.skku.edu",
+        "education": "성균관대학교 (교수)"
+    },
+    {
+        "image": "image/eunilpark.jpg",
+        "name": "박은일",
+        "job": "CTO",
+        "email": "eunilpark@g.skku.edu",
+        "education": "성균관대학교 (교수)"
+    },
+    {
+        "image": "image/jeewooyoon.png",
+        "name": "윤지우",
+        "job": "AI Engineer",
+        "email": "jeewooyoon@g.skku.edu",
+        "education": "성균관대학교"
+    },
+    {
+        "image": "image/taehooli.jpg",
+        "name": "이태호",
+        "job": "AI Enginner",
+        "email": "taehooli@g.skku.edu",
+        "education": "성균관대학교"
+    },
+    {
+        "image": "image/hongguenji.jpg",
+        "name": "지홍근",
+        "job": "AI Enginner",
+        "email": "hongguenji@g.skku.edu",
+        "education": "성균관대학교"
+    },
+    {
+        "image": "image/junseoko.jpg",
+        "name": "고준서",
+        "job": "Intern",
+        "email": "sta06167@g.skku.edu",
+        "education": "성균관대학교"
+    }
+]

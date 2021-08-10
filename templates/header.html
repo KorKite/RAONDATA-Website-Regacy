@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="kr">
+
+<title>Raon Data</title>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<script>
+    alert('{{ messages[0] }}');
+</script>
+{% endif %}
+{% endwith %}
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href={{url_for("static", filename="image/main.png" )}}>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <link rel="stylesheet" , href={{ url_for('static', filename='css/styles.css' ) }}>
+</head>
+
+<body>
+    <header>
+        <div class="fixed inset-0 flex justify-between border-b-1 bg-gray-900 shadow-md border-black h-14 w-full">
+            <div class="flex pt-1 pl-10">
+                <a class="text-3xl ml-10 text-white m-2" href={{url_for("home")}}><span>Raon Data</span></a>
+            </div>
+            <div class="flex">
+                <div class="flex pt-1 pl-10">
+                    <a class="text-lg mr-10 hover:text-green-400 text-white m-4"
+                        href={{url_for("ask")}}><span>상담문의</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+        <!-- Main content block -->
+        {% block content %}{% endblock %}
+    </main>
+</body>
+<footer class="h-36 p-10 bg-gray-900">
+    <div>
+        <p class=" text-center text-white text-md"> Raon Data </p>
+    </div>
+    <div>
+        <p class="text-center text-white text-xs">Copyright 2020. RAON DATA All Rights Reserved.</p>
+    </div>
+
+    <div class="flex mt-5 justify-center">
+        <p class="text-center m-3 text-gray-400 text-white text-xs">Email - choijjanga@gmail.com</p>
+        <p class="text-center m-3 text-gray-400 text-xs">대표번호 - 010-3622-8502</p>
+    </div>
+</footer>
+
+</html>

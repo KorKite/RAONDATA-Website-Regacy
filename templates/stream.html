@@ -1,0 +1,113 @@
+{% extends "header.html" %}
+
+{% block content %}
+<div class="justify-center bg-gradient-to-tr from-green-400 to-blue-500 w-full mt-14">
+    <div class="h-80 pt-52 px-20">
+        <p class="text-7xl text-center font-bold text-gray-800 uppercase font-sans"> possible AI </p>
+        <p class="text-7xl text-center font-bold font-sans text-gray-800 uppercase font-sans"> for your Business </p>
+    </div>
+    <div class="h-16 lg:px-40 px-16 mt-32">
+        <p class="text-center text-lg font-sans-kr text-gray-800">놀라운 인공지능의 능력을 경험하세요</p>
+    </div>
+    <div class="flex items-center justify-center justify-center h-32 mt-10">
+        <a href={{url_for("ask")}}>
+            <div
+                class="border-2 text-center w-36 hover:border-white hover:text-white border-black rounded-lg px-4 py-3 ">
+                상담신청하기
+            </div>
+        </a>
+    </div>
+</div>
+<!-- Our project -->
+<div class=" justify-center lg:px-20 px-10 py-14 bg-gray-100">
+    <div class="flex flex-wrap justify-center item-center">
+        <div class="flex m-5 justify-between p-10 bg-indigo-100 rounded-lg shadow-lg">
+
+            <div class="w-96 pl-3 contents-center">
+                <p class="text-start mb-2 mx-auto text-3xl font-sans">우리가 누구인가요?</p>
+                <p class="text-start mx-auto  text-lg font-sans">인공지능을 비즈니스에 접목하고 싶지만, 시작에 어려움을 겪는 분들을 위해, 컨설팅, 개발, 실제
+                    사용하기까지의 과정을 도와드리는 회사입니다.
+                </p>
+            </div>
+        </div>
+        {% for project in projects %}
+        <div class="flex m-5 justify-between p-10 bg-white rounded-lg shadow-lg">
+            <div class="w-16">
+                <img src={{url_for("static", filename=project.thumnail )}}>
+            </div>
+            <div class="w-80 pl-3 contents-center">
+                <p class="text-start mb-2 mx-auto text-2xl">{{project.title}}</p>
+                <p class="text-start mx-auto text-md">{{project.contents}}</p>
+                <a href={{project.link}}>
+                    <p class="hover:underline hover:text-green-400 mt-2 text-xs">{{project.linkname}}</p>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+<!-- Our Team -->
+<div class="xl:px-20 px-10 py-14 bg-gray-100">
+    <div class="flex item-center justify-center">
+        <div class="flex justify-center border-b-4 w-64 mb-10 border-blue-800">
+            <p class="text-center text-3xl font-semibold">Our Team</p>
+        </div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 mx-auto justify-center items-center">
+        {% for human in humans %}
+        <div class="max-w-xs m-3 w-64">
+            <div class="bg-white shadow-xl rounded-lg py-3 ">
+                <div class="photo-wrapper p-2">
+                    <img class="w-32 h-32 rounded-lg mx-auto border-2 border-black" src={{url_for("static",
+                        filename=human.image )}} alt={{human.name}}>
+                </div>
+                <div class="p-2">
+                    <h3 class="text-center text-xl text-gray-900 font-medium leading-8">{{human.name}}</h3>
+                    <div class="text-center text-gray-400 text-xs font-semibold">
+                        <p>{{human.job}}</p>
+                    </div>
+                    <table class="text-xs my-3">
+                        <tbody>
+                            <tr>
+                                <td class="px-2 py-2 text-gray-500 font-semibold">Email</td>
+                                <td class="px-2 py-2">{{human.email}}</td>
+                            </tr>
+                            <tr>
+                                <td class="px-2 py-2 text-gray-500 font-semibold">Education</td>
+                                <td class="px-2 py-2">{{human.education}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+<div class="lg:px-20 px-10 py-14 bg-gray-100">
+    <div class="flex item-center justify-center">
+        <div class="flex justify-center border-b-4 w-64 mb-10 border-blue-800">
+            <p class="text-center text-3xl">협력기관</p>
+        </div>
+    </div>
+    <div class="flex justify-center">
+        <div class="p-10 rounded-lg bg-white w-10/12">
+            <!-- <p class="text-sm ml-2">Raon Data는 여러 대학, 연구실과 함께합니다.</p> -->
+            <div class="flex flex-wrap">
+                <img class="h-40 m-3" src={{url_for("static", filename="image/skku.jpg" )}} />
+                <img class="h-24 mt-11" src={{url_for("static", filename="image/hanyang.png" )}} />
+                <img class="h-24 mt-11 mx-10" src={{url_for("static", filename="image/ucla.png" )}} />
+                <img class="h-20 mt-12 m-4" src={{url_for("static", filename="image/venture.png" )}} />
+                <img class="h-20 mt-9 m-3" src={{url_for("static", filename="image/etri.png" )}} />
+                <img class="h-20 mt-9 m-3" src={{url_for("static", filename="image/hangil.jpeg" )}} />
+                <img class="h-20 mt-9 mx-3" src={{url_for("static", filename="image/borame.png" )}} />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

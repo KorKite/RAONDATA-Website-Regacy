@@ -1,0 +1,23 @@
+[
+    {
+        "title":"OpenDance",
+        "contents":"인공지능을 활용하여 현대 무용을 배우고, 선생님과의 자세를 비교해주어 쉽게 현대무용을 배울 수 있도록 도와주는 인공지능 개발 / 서비스",
+        "link":"https://n.news.naver.com/article/009/0004723024",
+        "linkname":"관련기사 확인하기",
+        "thumnail":"image/opendance.png"
+    },
+    {
+        "title":"VCTUBE",
+        "contents":"특정인의 목소리를 훈련시켜, TTS처럼 활용할 수 있도록 하는 인공지능 개발",
+        "link":"http://www.interspeech2020.org/uploadfile/pdf/Mon-S&T-2-2.pdf",
+        "linkname":"관련논문 확인하기",
+        "thumnail":"image/vctube.png"
+    },
+    {
+        "title":"SD-OCT 질병 검출",
+        "contents":"인공지능을 활용하여 CT이미지 내의 질병을 탐지하는 인공지능 개발",
+        "link":"https://www.nature.com/articles/s41598-020-75816-w",
+        "linkname":"관련논문 확인하기",
+        "thumnail":"image/eye.png"
+    }
+]
